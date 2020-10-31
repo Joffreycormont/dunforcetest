@@ -3,10 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header class="wrapper">
+            <nav>
+                <ul>
+                    <li> <a href="{{ path('home') }}">Accueil</a></li>
+                    <li> <a href="{{ path('new_organization_page') }}">Ajouter une organisation</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="wrapper">
+            {% block body %}{% endblock %}
+        </main>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

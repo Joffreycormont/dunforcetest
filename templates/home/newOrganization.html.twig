@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle organisation{% endblock %}
+
+{% block body %}
+<section class="new_organization">
+    <h2>Ajouter une organisation</h2>
+
+
+    {{ form_start(form, {'action': path('organization_add'), 'method': 'POST'}) }}
+        {{ form_errors(form) }}
+        {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+</section>
+
+{% endblock %}

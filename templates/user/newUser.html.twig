@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvel utilisateur{% endblock %}
+
+{% block body %}
+<section class="new_user">
+    <h2>Ajouter un utilisateur</h2>
+
+    {{ form_start(userForm, {'action': path('user_add'), 'method': 'POST'}) }}
+        {{ form_errors(userForm) }}
+        {{ form_widget(userForm) }}
+    {{ form_end(userForm) }}
+
+</section>
+
+{% endblock %}

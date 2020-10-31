@@ -1,0 +1,47 @@
+
+*,a{
+    text-decoration: none !important;
+    list-style: none !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    width: 85%;
+    margin: 0 auto;
+}
+
+header nav ul {
+    display: flex;
+    margin: 3em 0;
+}
+
+header nav ul li {
+    margin-right: 1em;
+}
+
+header nav ul li a{
+    color: rgb(135, 202, 135);
+}
+
+.btn-secondary, .btn-primary{
+    background-color: rgb(135, 202, 135) !important;
+    border: none;
+}
+
+header nav ul li a:hover{
+    text-decoration: underline;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table th{
+    padding: 1em;
+    border-bottom: 3px solid rgb(135, 202, 135);
+}
+
+table td{
+    padding: 1em;
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
