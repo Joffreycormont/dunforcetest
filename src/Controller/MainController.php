@@ -33,10 +33,10 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/organisation/nouveau", name="new_organization_page")
+     * @Route("/organisation/nouveau", name="add_organization_page")
      * Page d'ajout d'une organisation
      */
-    public function newOrganization(): Response
+    public function addOrganization(): Response
     {
         $defaultData = [];
         $form = $this->createFormBuilder($defaultData)
@@ -52,7 +52,7 @@ class MainController extends AbstractController
         ->getForm();
 
 
-        return $this->render('home/newOrganization.html.twig', [
+        return $this->render('home/addOrganization.html.twig', [
             'organizationList' => $this->organizationList['organizations'],
             'form' => $form->createView()
         ]);
@@ -89,10 +89,10 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/utilisateur/nouveau", name="new_user_page")
+     * @Route("/utilisateur/nouveau", name="add_user_page")
      *  Page d'ajout utilisateur
      */
-    public function newUser(): Response
+    public function addUser(): Response
     {
         $choiceOrganizationArray = [];
 
@@ -124,7 +124,7 @@ class MainController extends AbstractController
         ->getForm();
 
 
-        return $this->render('user/newUser.html.twig', [
+        return $this->render('user/addUser.html.twig', [
             'controller_name' => 'UserController',
             'userForm' => $form->createView()
         ]);

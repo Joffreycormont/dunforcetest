@@ -17,7 +17,7 @@ class OrganizationsController extends MainController
      * @Route("/organization/add", name="organization_add", methods={"POST"})
      * Ajouter une organisation dans le fichier yaml
      */
-    public function addOrganization(Request $request): Response
+    public function add(Request $request): Response
     {
 
         $defaultData = [];
@@ -85,7 +85,7 @@ class OrganizationsController extends MainController
 
 
     /**
-     * @Route("/organization/remove/{id}", name="organization_remove", methods={"POST"})
+     * @Route("/organization/remove/{id}", name="organization_remove")
      * Ajouter une organisation dans le fichier yaml
      */
     public function remove($id): Response
