@@ -179,7 +179,7 @@ class MainController extends AbstractController
 
     /**
      * @Route("/telechargement/fichier/yaml/{filename}", name="download_yaml")
-     *  Page d'édition utilisateur
+     *  télécharger fichier yaml
      */
     public function doawnloadYaml($filename): Response
     {
